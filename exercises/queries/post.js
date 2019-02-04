@@ -19,6 +19,11 @@ const postSchema = new mongoose.Schema({
   isFeatured: {
     type: Boolean,
     deafult: false
+  },
+  author: {
+      type: mongoose.Schema.Types.ObjectId,
+      required: true,
+      ref: 'author'
   }
 }, {timestamps: true})
 
